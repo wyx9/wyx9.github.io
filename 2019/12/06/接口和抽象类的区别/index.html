@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Test01 | wyx99</title>
+  <title>接口和抽象类的区别 | wyx99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.equals(),hashcode()，&#x3D;&#x3D;**之间的区别1、equals 和 hashcode 方法都是Object 类中的方法。 equals 和&#x3D;&#x3D; ，equals若不重写的话，equals本质是&#x3D;&#x3D;. 2、equals 与hashcode的不同  java对与equals和hashcode方法   如果两个对象的hashcode相同，他们并不一定相等 如果两个对象的equals()相同">
+  <meta name="description" content="​    （比抽象类还抽象的类就是接口，接口中只有抽象方法）  1.抽象类和接口都不能实例化(不能创建抽象类和接口的实例) 2.抽象类要被子类继承， 而接口要被子类实现。 3.抽象类中可以有属性，可以有方法的声明，接口中只能做方法申明(抽象方法) 4.抽象类中变量可以是普通的变量，接口中定义的变量只能是公共的静态产量( public 和      static 修饰的) 5.抽象类中的方法子类必须">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Test01">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;Test01&#x2F;index.html">
+<meta property="og:title" content="接口和抽象类的区别">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB&#x2F;index.html">
 <meta property="og:site_name" content="wyx99">
-<meta property="og:description" content="1.equals(),hashcode()，&#x3D;&#x3D;**之间的区别1、equals 和 hashcode 方法都是Object 类中的方法。 equals 和&#x3D;&#x3D; ，equals若不重写的话，equals本质是&#x3D;&#x3D;. 2、equals 与hashcode的不同  java对与equals和hashcode方法   如果两个对象的hashcode相同，他们并不一定相等 如果两个对象的equals()相同">
+<meta property="og:description" content="​    （比抽象类还抽象的类就是接口，接口中只有抽象方法）  1.抽象类和接口都不能实例化(不能创建抽象类和接口的实例) 2.抽象类要被子类继承， 而接口要被子类实现。 3.抽象类中可以有属性，可以有方法的声明，接口中只能做方法申明(抽象方法) 4.抽象类中变量可以是普通的变量，接口中定义的变量只能是公共的静态产量( public 和      static 修饰的) 5.抽象类中的方法子类必须">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;Test01&#x2F;test01.jpg">
-<meta property="og:updated_time" content="2019-12-06T14:34:30.687Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB&#x2F;test03.jpg">
+<meta property="og:updated_time" content="2019-12-08T15:32:47.386Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;Test01&#x2F;test01.jpg">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB&#x2F;test03.jpg">
   
     <link rel="alternative" href="/atom.xml" title="wyx99" type="application/atom+xml">
   
@@ -83,13 +83,13 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/wyx9" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="weibo" target="_blank" href="https://weibo.com/3874371980/profile?topnav=1&wvr=6" title="weibo"><i class="icon-weibo"></i></a>
 		        
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/wang-zhao-19-71/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
 		</nav>
@@ -126,13 +126,13 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/wyx9" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="weibo" target="_blank" href="https://weibo.com/3874371980/profile?topnav=1&wvr=6" title="weibo"><i class="icon-weibo"></i></a>
 			        
 						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/wang-zhao-19-71/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 				</div>
 			</nav>
@@ -158,19 +158,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Test01" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-接口和抽象类的区别" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Test01
+      接口和抽象类的区别
     </h1>
   
 
         
-        <a href="/2019/12/06/Test01/" class="archive-article-date">
+        <a href="/2019/12/06/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
   	<time datetime="2019-12-06T06:13:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-06</time>
 </a>
         
@@ -178,31 +178,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-equals-hashcode-，-之间的区别"><a href="#1-equals-hashcode-，-之间的区别" class="headerlink" title="1.equals(),hashcode()，==**之间的区别"></a><em>1.equals(),hashcode()<strong>，</strong>==**之间的区别</em></h2><p>1、equals 和 hashcode 方法都是Object 类中的方法。 equals 和== ，equals若不重写的话，equals本质是==.</p>
-<p>2、equals 与hashcode的不同</p>
+        <p>​    （比抽象类还抽象的类就是接口，接口中只有抽象方法）</p>
 <ul>
-<li><p>java对与equals和hashcode方法</p>
-</li>
-<li><ul>
-<li>如果两个对象的hashcode相同，他们并不一定相等</li>
-<li>如果两个对象的equals()相同，那么他们的hashcode值一定相同</li>
-<li>(上述 可能是由于哈希码 在生成的过程中产生的冲突造成的)</li>
+<li>1.抽象类和接口都不能实例化(不能创建抽象类和接口的实例)</li>
+<li>2.抽象类要被子类继承， 而接口要被子类实现。</li>
+<li>3.抽象类中可以有属性，可以有方法的声明，接口中只能做方法申明(抽象方法)</li>
+<li>4.抽象类中变量可以是普通的变量，接口中定义的变量只能是公共的静态产量( public 和      static 修饰的)</li>
+<li>5.抽象类中的方法子类必须全部实现，若不全部实现的话这个类也是一个抽象类，接口中，若某个类不能全部实现接口中的抽象方法，那这个类也是一个抽象类。</li>
+<li>6.抽象类中可以没有抽象方法，但是只要有了抽象方法的话，这个类就是抽象类。</li>
+<li>7.抽象方法只能申明， 不能实现，抽象方法要被实现，所以不能是静态的，也不能是私有的。</li>
 </ul>
-</li>
-</ul>
-<p>3、== </p>
+<p>拓展：关于接口中是否只有抽象方法的问题</p>
 <ul>
-<li>1.比较基本数据类型： byte short int long     char double folt boolean 是比较他们的值</li>
-<li>2.比较引用类型：比较的是他们在内存中的地址。== 是对栈中的内存进行比较。</li>
-<li>equals（）不重写的话 本质就是== ，equals重写后是比较堆中的值，比较的是内容。</li>
+<li>Java     8中引入了一个新的概念，叫做default方法，也可以称为Defender方法，或者虚拟扩展方法（Virtual extension     methods)。</li>
+<li>Default方法是指，在接口内部包含了一些默认的方法实现（也就是接口中可以包含方法体，这打破了Java之前版本对接口的语法限制），从而使得接口在进行扩展的时候，不会破坏与接口相关的实现类代码。</li>
 </ul>
-<p>4、equals重写</p>
-<ul>
-<li>1.equals重写时候总是要重写hashcode，</li>
-<li>2.hashcode方法一般在集合中使用</li>
-<li>3.当覆盖了equals方法后(列如：string类，method类)，比较对象将通过覆盖后的equals方法进行比较</li>
-</ul>
-<p><img src="/images/Test01/test01.jpg" alt="test01"></p>
+<p><img src="/images/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/test03.jpg" alt="image-20191208232845655"></p>
 
       
 
@@ -282,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/06/Test01/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/06/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -296,9 +287,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/12/08/String%E7%B1%BB%E4%B8%8Estringbuffer,stringbuilder%20%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          String类与stringbuffer,stringbuilder 的区别
+        
+      </div>
+    </a>
   
-    <a href="/2019/12/06/Test02/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">test02</div>
+  
+    <a href="/2019/12/06/equals(),hashcode()%EF%BC%8C==%20%20%20%20%20%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB%20%20/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">equals(),hashcode()**，**==     之间的区别</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -325,7 +325,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-equals-hashcode-，-之间的区别"><span class="toc-number">1.</span> <span class="toc-text">1.equals(),hashcode()，==**之间的区别</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
