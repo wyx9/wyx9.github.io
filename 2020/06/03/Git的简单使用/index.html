@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Git的简单使用 | wyx99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GIT版本控制做一个项目，版本迭代是很必要的。 当多人开发一个项目时候，如何保证分工和效率呢？  本地版本控制系统 项目在本地中存储多个版本   集成式版本管理系统(SVN) 项目在服务器中保存，每个人只拿自己需要的那一份   分布式版本管理系统(Git) 项目在服务器中保存，每个人都拿到完整的项目     ​    SVN  和 Git  的最主要的区别   SVN    是集中式版本控制系统，">
+  <meta name="description" content="GIT版本控制做一个项目，版本迭代是很必要的。">
 <meta name="keywords" content="-git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git的简单使用">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="wyx99">
-<meta property="og:description" content="GIT版本控制做一个项目，版本迭代是很必要的。 当多人开发一个项目时候，如何保证分工和效率呢？  本地版本控制系统 项目在本地中存储多个版本   集成式版本管理系统(SVN) 项目在服务器中保存，每个人只拿自己需要的那一份   分布式版本管理系统(Git) 项目在服务器中保存，每个人都拿到完整的项目     ​    SVN  和 Git  的最主要的区别   SVN    是集中式版本控制系统，">
+<meta property="og:description" content="GIT版本控制做一个项目，版本迭代是很必要的。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322151921037.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322151345643.png">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322180334175.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322180354263.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%20%20%20%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322180450156.png">
-<meta property="og:updated_time" content="2020-06-03T15:18:01.225Z">
+<meta property="og:updated_time" content="2020-06-03T15:23:59.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322151921037.png">
   
@@ -194,6 +194,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h1><h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><p>做一个项目，版本迭代是很必要的。</p>
+<a id="more"></a>
+
 <p>当多人开发一个项目时候，如何保证分工和效率呢？</p>
 <ul>
 <li>本地版本控制系统<ul>
