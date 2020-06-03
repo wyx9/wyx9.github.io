@@ -6,14 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | wyx99</title>
+  <title>Git的简单使用 | wyx99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="wyx99">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="GIT版本控制做一个项目，版本迭代是很必要的。 当多人开发一个项目时候，如何保证分工和效率呢？  本地版本控制系统 项目在本地中存储多个版本   集成式版本管理系统(SVN) 项目在服务器中保存，每个人只拿自己需要的那一份   分布式版本管理系统(Git) 项目在服务器中保存，每个人都拿到完整的项目     ​    SVN  和 Git  的最主要的区别   SVN    是集中式版本控制系统，">
+<meta name="keywords" content="-git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git的简单使用">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="wyx99">
+<meta property="og:description" content="GIT版本控制做一个项目，版本迭代是很必要的。 当多人开发一个项目时候，如何保证分工和效率呢？  本地版本控制系统 项目在本地中存储多个版本   集成式版本管理系统(SVN) 项目在服务器中保存，每个人只拿自己需要的那一份   分布式版本管理系统(Git) 项目在服务器中保存，每个人都拿到完整的项目     ​    SVN  和 Git  的最主要的区别   SVN    是集中式版本控制系统，">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322151921037.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322151345643.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322151807136.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322153106843.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322153334189.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322153937894.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322161124378.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322162213831.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322162828477.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322163015192.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322163645032.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322163706007.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322163837981.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322180255512.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322180334175.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322180354263.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%20%20%20%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322180450156.png">
+<meta property="og:updated_time" content="2020-06-03T15:18:01.225Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;03&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets&#x2F;image-20200322151921037.png">
   
     <link rel="alternative" href="/atom.xml" title="wyx99" type="application/atom+xml">
   
@@ -145,36 +167,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Git的简单使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/03/Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-06-03T15:17:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/03/Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">Git的简单使用</a>
+    <h1 class="article-title" itemprop="name">
+      Git的简单使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/06/03/Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-06-03T15:17:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
+</a>
+        
+      </header>
+	
+	
+	
+
+
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h1><h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><p>做一个项目，版本迭代是很必要的。</p>
+<p>当多人开发一个项目时候，如何保证分工和效率呢？</p>
+<ul>
+<li>本地版本控制系统<ul>
+<li>项目在本地中存储多个版本</li>
+</ul>
+</li>
+<li>集成式版本管理系统(SVN)<ul>
+<li>项目在服务器中保存，每个人只拿自己需要的那一份</li>
+</ul>
+</li>
+<li>分布式版本管理系统(Git)<ul>
+<li>项目在服务器中保存，每个人都拿到完整的项目</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>​    SVN  和 Git  的最主要的区别</p>
+</blockquote>
+<ul>
+<li>SVN    是集中式版本控制系统，版本库是集中放在中央服务器的，而工作的时候，用的是自己的电脑，所以首先要从中央服务器得到最新的版本，然后工作。完成工作后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，对网络带宽要求比较高。</li>
+</ul>
+<ul>
+<li>Git     是分布式版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库。工作的时候不需要联网了，协同的方法是这样的，比如说自己在电脑上改了A文件，其他人也在电脑上改了A文件，这时候，你们两之间只需要把各自的修改推送给对方，就可以看到对方的修改了。Git可以直接查看更新到了哪些代码和文件！！</li>
+</ul>
+<p>  <strong>Git</strong>  <strong>是目前时间最先进的分布式版本控制系统</strong></p>
+<h2 id="Git历史"><a href="#Git历史" class="headerlink" title="Git历史"></a>Git历史</h2><p>Git 是开源的，免费的，基于LINUX内核开发的  linux创始人 两周时间开发出来的</p>
+<h2 id="Git环境配置"><a href="#Git环境配置" class="headerlink" title="Git环境配置"></a>Git环境配置</h2><blockquote>
+<p>​    安装 ，无脑下一步</p>
+</blockquote>
+<blockquote>
+<p>​    卸载git</p>
+</blockquote>
+<ul>
+<li>删除git配置的环境变量(环境变量只是为了全局使用而已)</li>
+<li>卸载！</li>
+</ul>
+<ul>
+<li>Git Bash:    Linux风格 命令行   推荐使用</li>
+<li>Git CMD:     Windows 风格命令行</li>
+<li>Git  GUI:      图像化Git，不建议使用</li>
+</ul>
+<h4 id="一些基本的Linux-操作"><a href="#一些基本的Linux-操作" class="headerlink" title="一些基本的Linux 操作"></a>一些基本的Linux 操作</h4><blockquote>
+<p>​    Git配置信息</p>
+</blockquote>
+<h4 id="设置用户名与邮箱（用户表示，必要）"><a href="#设置用户名与邮箱（用户表示，必要）" class="headerlink" title="设置用户名与邮箱（用户表示，必要）"></a>设置用户名与邮箱（用户表示，必要）</h4><p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322151921037.png" alt="image-20200322151921037"></p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322151345643.png" alt="image-20200322151345643"></p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322151807136.png" alt="image-20200322151807136"></p>
+<h2 id="Git基本理论"><a href="#Git基本理论" class="headerlink" title="Git基本理论"></a>Git基本理论</h2><p>Git基本理论（核心）</p>
+<blockquote>
+<p>​    工作区域</p>
+</blockquote>
+<p>git本地有三个工作区域，工作目录 ， 暂存区，资源库， 如果在加上远程git仓库 就可以分为4个工作区域，文件在四个区域之间的转换关系如下：</p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322153106843.png" alt="image-20200322153106843"></p>
+<h2 id="Git项目搭建"><a href="#Git项目搭建" class="headerlink" title="Git项目搭建"></a>Git项目搭建</h2><blockquote>
+<p>​    本地搭建仓库</p>
+</blockquote>
+<p>1、创建一个全新的本地仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git init</span></pre></td></tr></table></figure>
+
+<p>2、发现文件目录多了一个 隐藏的文件夹.git</p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322153334189.png" alt="image-20200322153334189"></p>
+<blockquote>
+<p>​    克隆远程仓库</p>
+</blockquote>
+<p>1、复制码云 上仓库的地址    <a href="https://gitee.com/wyx99/blog.git" target="_blank" rel="noopener">https://gitee.com/wyx99/blog.git</a></p>
+<p>2、复制 远程仓库中的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;gitee.com&#x2F;wyx99&#x2F;blog.git</span></pre></td></tr></table></figure>
+
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322153937894.png" alt="image-20200322153937894"></p>
+<h2 id="Git文件操作"><a href="#Git文件操作" class="headerlink" title="Git文件操作"></a>Git文件操作</h2><blockquote>
+<p>​    文件的四种状态</p>
+</blockquote>
+<ul>
+<li>Untracked:未跟踪</li>
+<li>Unmodify:文件以及入库</li>
+<li>Modified:文件以修改</li>
+<li>Staged:暂存状态</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看指定文件的状态</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">git status [filename]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看所有文件状态</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">git status</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#git add .   添加所有文件到暂存区</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#git commit -m "注释消息内容"  提交暂存区中的内容到本地仓库  -m :提交信息(注释)</span></span></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>​    忽略文件</p>
+</blockquote>
+<p>有时候我们不想把某些文件纳入版本控制中，比如数据库的文件，临时文件，设计文件等</p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322161124378.png" alt="image-20200322161124378"></p>
+<h2 id="使用码云"><a href="#使用码云" class="headerlink" title="使用码云"></a>使用码云</h2><p>1、注册码云</p>
+<p>2、设置本机绑定SSH公钥，实现免密码登录</p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322162213831.png" alt="image-20200322162213831"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"># 进入 c:\user\Administrator\.ssh目录</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"># 生成公钥</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">ssh-keygen</span></pre></td></tr></table></figure>
+
+<p>3、将公钥信息 public key 添加到码云账户中即可</p>
+<p>4、使用码云创建一个自己的仓库</p>
+<ul>
+<li>新建一个即可</li>
+<li>许可证：开源是否 随意转载，是否可以随便商业使用，。。限制！一般使用GPL3.0</li>
+</ul>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322162828477.png" alt="image-20200322162828477"></p>
+<p>5、克隆项目到本地！</p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322163015192.png" alt="image-20200322163015192"></p>
+<h2 id="IDEA中集成Git"><a href="#IDEA中集成Git" class="headerlink" title="IDEA中集成Git"></a>IDEA中集成Git</h2><p>1、新建项目，绑定git</p>
+<ul>
+<li>将我们远程的git文件目录拷贝到项目中即可</li>
+</ul>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322163645032.png" alt="image-20200322163645032"></p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322163706007.png" alt="image-20200322163706007"></p>
+<ul>
+<li><p>注意观察idea中的变化</p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322163837981.png" alt="image-20200322163837981"></p>
+</li>
+</ul>
+<p>2、修改文件，使用IDEA 操作 GIT</p>
+<ul>
+<li>在IDEA 中以此  .add   comment   push 就行了</li>
+</ul>
+<p>3、提交测试</p>
+<h2 id="测试提交笔记"><a href="#测试提交笔记" class="headerlink" title="测试提交笔记"></a>测试提交笔记</h2><p>1、在码云上创建一个仓库</p>
+<p>2、在本地文件clone 下来 仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 项目的SSH地址</span></pre></td></tr></table></figure>
+
+<p>3、复制git 文件到 自己需要上传的目录</p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322180255512.png" alt="image-20200322180255512"></p>
+<ol start="4">
+<li><p>add   commint   push 三步骤</p>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322180334175.png" alt="image-20200322180334175"></p>
+</li>
+</ol>
+<p><img src="Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.assets/image-20200322180354263.png" alt="image-20200322180354263"></p>
+<p>5、去网页查看是否成功</p>
+<p><img src="Git%20%20%20%E4%BD%BF%E7%94%A8.assets/image-20200322180450156.png" alt="image-20200322180450156"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -186,269 +365,141 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/22/Shiro/" class="archive-article-date">
-  	<time datetime="2020-01-22T14:21:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/22/Shiro/">Shiro</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">安全</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/10/%E5%87%A0%E7%A7%8D%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2019-12-10T15:21:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/10/%E5%87%A0%E7%A7%8D%E7%AE%97%E6%B3%95/">几种算法</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/03/Git%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/10/servlet%E4%B8%AD%E8%BD%AC%E5%8F%91%E5%92%8C%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2019-12-10T15:14:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/22/Shiro/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Shiro</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/10/servlet%E4%B8%AD%E8%BD%AC%E5%8F%91%E5%92%8C%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E5%8C%BA%E5%88%AB/">servlet中请求转发和重定向的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">servlet</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GIT"><span class="toc-number">1.</span> <span class="toc-text">GIT</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#版本控制"><span class="toc-number">1.1.</span> <span class="toc-text">版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git历史"><span class="toc-number">1.2.</span> <span class="toc-text">Git历史</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git环境配置"><span class="toc-number">1.3.</span> <span class="toc-text">Git环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一些基本的Linux-操作"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">一些基本的Linux 操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置用户名与邮箱（用户表示，必要）"><span class="toc-number">1.3.0.2.</span> <span class="toc-text">设置用户名与邮箱（用户表示，必要）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git基本理论"><span class="toc-number">1.4.</span> <span class="toc-text">Git基本理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git项目搭建"><span class="toc-number">1.5.</span> <span class="toc-text">Git项目搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git文件操作"><span class="toc-number">1.6.</span> <span class="toc-text">Git文件操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用码云"><span class="toc-number">1.7.</span> <span class="toc-text">使用码云</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IDEA中集成Git"><span class="toc-number">1.8.</span> <span class="toc-text">IDEA中集成Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试提交笔记"><span class="toc-number">1.9.</span> <span class="toc-text">测试提交笔记</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/09/equals(),hashcode(),==%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2019-12-09T02:00:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/09/equals(),hashcode(),==%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/">equals(),hashcode()，==之间的区别</a>
-    </h1>
+        
+    </div>
+</aside>
+
+
+
+
+  <!-- ������City�氲װ���� -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80Nzg3MC8yNDM2Nw==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
+</div>
+<!-- City�氲װ��������� -->
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/08/String%E7%B1%BB%E4%B8%8Estringbuffer,stringbuilder%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2019-12-08T15:19:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/08/String%E7%B1%BB%E4%B8%8Estringbuffer,stringbuilder%E7%9A%84%E5%8C%BA%E5%88%AB/">String类与stringbuffer,stringbuilder 的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/06/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2019-12-06T06:13:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/06/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/">接口和抽象类的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -477,8 +528,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
